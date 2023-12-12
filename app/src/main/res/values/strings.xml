@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ComposePractice</string>
+    <string name="instruction_text">BullsEye example game</string>
+    <string name="hit_me_btn_txt">Hit Me</string>
+    <string name="max_val_txt">100</string>
+    <string name="min_val_txt">1</string>
+    <string name="target_val">56</string>
+    <string name="result_dialog_btn_txt">res</string>
+    <string name="result_dialog_title">Hello there!</string>
+    <string name="result_dialog_msg">The slider\'s value is %1$d.</string>
+</resources>
