@@ -5,7 +5,17 @@
     <string name="max_val_txt">100</string>
     <string name="min_val_txt">1</string>
     <string name="target_val">56</string>
-    <string name="result_dialog_btn_txt">res</string>
+    <string name="result_dialog_btn_txt">Okay</string>
     <string name="result_dialog_title">Hello there!</string>
-    <string name="result_dialog_msg">The slider\'s value is %1$d.</string>
+    <string name="result_dialog_msg">The slider\'s value is %1$d.\nYou scored %2$d points this round.</string>
+    <string name="start_over">start</string>
+    <string name="info">info</string>
+    <string name="score_label">score</string>
+    <string name="current_round_label">round</string>
+    <string name="alert_title1">Perfect!</string>
+    <string name="alert_title2">You almost had it!</string>
+    <string name="alert_title3">Not Bad.</string>
+    <string name="alert_title4">Are you even trying?</string>
+    <string name="slider_thumb_desc">Slider Thumb</string>
+    <string name="background_image">background image</string>
 </resources>
