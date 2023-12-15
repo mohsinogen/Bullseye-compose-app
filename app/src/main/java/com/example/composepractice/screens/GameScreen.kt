@@ -34,7 +34,9 @@ import kotlin.math.abs
 import kotlin.random.Random
 
 @Composable
-fun GameScreen() {
+fun GameScreen(
+    navigateToAbout:() -> Unit
+) {
 
     var alertIsVisible by rememberSaveable { mutableStateOf(false) }
     var sliderValue by rememberSaveable { mutableStateOf(0.0f) }
@@ -93,6 +95,7 @@ fun GameScreen() {
         return title
     }
 
+
     Box {
         Image(
             modifier = Modifier.fillMaxWidth(),
@@ -131,7 +134,8 @@ fun GameScreen() {
                     totalScore = totalScore,
                     currentRound = currentRound,
                     startHandler = { startOver() },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    navigateToAbout = {navigateToAbout()}
                 )
             }
             Spacer(modifier = Modifier.weight(.5f))
@@ -152,6 +156,6 @@ fun GameScreen() {
 @Composable
 fun GameScreenPreview() {
     ComposePracticeTheme {
-        GameScreen()
+        GameScreen(navigateToAbout = {})
     }
 }

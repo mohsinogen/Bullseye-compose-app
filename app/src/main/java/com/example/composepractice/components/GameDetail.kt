@@ -24,7 +24,12 @@ import androidx.compose.ui.unit.sp
 import com.example.composepractice.R
 
 @Composable
-fun GameDetail(totalScore:Int=0, currentRound:Int=1, startHandler:() -> Unit, modifier: Modifier = Modifier){
+fun GameDetail(totalScore:Int=0,
+               currentRound:Int=1,
+               startHandler:() -> Unit,
+               modifier: Modifier = Modifier,
+               navigateToAbout:() -> Unit
+){
     Row (
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround,
@@ -41,7 +46,9 @@ fun GameDetail(totalScore:Int=0, currentRound:Int=1, startHandler:() -> Unit, mo
         GameInfo(label = stringResource(R.string.score_label), value = totalScore)
         GameInfo(label = stringResource(R.string.current_round_label), value = currentRound)
 
-        FilledIconButton(onClick = {  },
+        FilledIconButton(onClick = {
+                                   navigateToAbout()
+        },
             colors = IconButtonDefaults.filledIconButtonColors(
                 containerColor = MaterialTheme.colorScheme.tertiary
             ),modifier = Modifier.size(50.dp)) {
@@ -65,5 +72,5 @@ fun GameInfo(label:String, value: Int = 0){
 @Preview(showBackground = true)
 @Composable
 fun GameDetailPreview(){
-    GameDetail(totalScore = 56, startHandler = {})
+    GameDetail(totalScore = 56, startHandler = {}, navigateToAbout = {})
 }
